@@ -9,7 +9,7 @@ app.get("/api/v1/coffee", (req, res) => {
   res.status(200).send({
     success: "true",
     message: "Coffee list",
-    todos: coffee
+    coffee: coffee
   });
 });
 const PORT = process.env.PORT || 5000;
