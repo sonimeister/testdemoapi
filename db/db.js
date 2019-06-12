@@ -113,4 +113,4 @@ const coffee = [
   }
 ];
 
-export default coffee;
+module.export = coffee;

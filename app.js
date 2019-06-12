@@ -1,5 +1,5 @@
-import express from "express";
-import db from "./db/db";
+const express = require("express");
+const db = require("./db/db");
 
 // Set up the express app
 const app = express();
@@ -12,7 +12,7 @@ app.get("/api/v1/coffee", (req, res) => {
     todos: db
   });
 });
-const PORT = 5000;
+const PORT = process.env.PORT || 5000;
 
 app.listen(PORT, () => {
   console.log(`server running on port ${PORT}`);
