@@ -8,7 +8,7 @@ const app = express();
 app.get("/api/v1/coffee", (req, res) => {
   res.status(200).send({
     success: "true",
-    message: "todos retrieved successfully",
+    message: "Hello from PR",
     todos: db
   });
 });
