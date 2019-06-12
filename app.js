@@ -4,7 +4,7 @@ const coffee = require("./db/coffee.json");
 // Set up the express app
 const app = express();
 
-// get all todos
+// get all coffee types
 app.get("/api/v1/coffee", (req, res) => {
   res.status(200).send({
     success: "true",
@@ -15,6 +15,5 @@ app.get("/api/v1/coffee", (req, res) => {
 const PORT = process.env.PORT || 5000;
 
 app.listen(PORT, () => {
-  console.log("coffee", coffee);
   console.log(`server running on port ${PORT}`);
 });
