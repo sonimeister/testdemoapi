@@ -1,5 +1,5 @@
 const express = require("express");
-const db = require("./db/db");
+const coffee = require("./db/coffee.json");
 
 // Set up the express app
 const app = express();
@@ -8,12 +8,13 @@ const app = express();
 app.get("/api/v1/coffee", (req, res) => {
   res.status(200).send({
     success: "true",
-    message: "Hello from PR",
-    todos: db
+    message: "Coffee list",
+    todos: coffee
   });
 });
 const PORT = process.env.PORT || 5000;
 
 app.listen(PORT, () => {
+  console.log("coffee", coffee);
   console.log(`server running on port ${PORT}`);
 });
